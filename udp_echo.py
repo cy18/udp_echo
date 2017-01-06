@@ -12,6 +12,8 @@ ADDR = (HOST, PORT)
 udpServer = socket(AF_INET, SOCK_DGRAM)
 udpServer.bind(ADDR)
 
+print('listening on UDP port:', PORT)
+
 while True:
     print('waiting for message...')
     data, addr = udpServer.recvfrom(BUFSIZ)
