@@ -1,8 +1,11 @@
+import sys
 from socket import *
 from time import ctime
 
 HOST = ''
-PORT = 53
+if len(sys.argv) < 2:
+    raise('No port given')
+PORT = int(sys.argv[1])
 BUFSIZ = 128
 ADDR = (HOST, PORT)
 
